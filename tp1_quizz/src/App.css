@@ -1,0 +1,116 @@
+/* Container principal */
+.quiz-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: #fdfdfd;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Titre */
+  .quiz-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Question */
+  .question-card {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+  }
+  
+  .question-text {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  /* Choix */
+  .choices {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .choice-btn {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #f9f9f9;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+    text-align: left;
+  }
+  
+  .choice-btn:hover {
+    background: #f1f1f1;
+    border-color: #999;
+  }
+  
+  .choice-btn.selected {
+    background: #e6f0ff;
+    border-color: #007bff;
+  }
+  
+  /* Bouton soumettre */
+  .submit-btn {
+    margin-top: 16px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Résultats */
+  .results {
+    margin-top: 20px;
+  }
+  
+  .results-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  
+  .result-card {
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+  }
+  
+  .result-card.correct {
+    background: #e6ffe6;
+    border: 1px solid #28a745;
+  }
+  
+  .result-card.incorrect {
+    background: #ffe6e6;
+    border: 1px solid #dc3545;
+  }
+  
+  /* Bouton recommencer */
+  .restart-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .restart-btn:hover {
+    background-color: #0056b3;
+  }
+  
