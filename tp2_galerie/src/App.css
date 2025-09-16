@@ -11,23 +11,31 @@
   padding: 2rem;
 }
 
+.main-description{
+  color: rgb(152, 157, 163);
+}
+
 /** Filter CSS*/
 .filter-category{
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  padding-top: 0.75%;
+  padding-bottom: 0.75%;
   margin: 1%;
-  padding: 0.5%;
-  background-color: rgb(14, 165, 183);
-  border-radius: 10%;
+  background-color: rgba(75, 72, 73, 0.493);
+  border-radius: 20px;
   color: white;
+
 }
 .filter-category.active{
-  background-color: #333;
+  background-color: rgb(14, 165, 183);
   color: white;
 }
 
 
 /** Card CSS*/
 .card{
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd1a;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -49,6 +57,10 @@
   height: 150px;
   overflow: hidden;
   margin-bottom: 4%;
+}
+
+.card-author{
+  color: rgb(152, 157, 163);
 }
 
 .card-category{

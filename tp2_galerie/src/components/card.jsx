@@ -14,7 +14,7 @@ export default function
                 <img className='card-image' src={url} alt="" />
             </div>
             <h2 className='card-title'>{title}</h2>
-            <p className='card-author'>{author}</p>
+            <p className='card-author'>Autheur : {author}</p>
             <div className='card-categories'>
                 {categories.map((category, index) => (
                     <span key={index} className='card-category'>

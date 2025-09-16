@@ -27,6 +27,7 @@ function App() {
   return (
     <>
       <h1>Galerie d'images</h1>
+      <p className='main-description'>Filtre par catégories.</p>
       <div>
         <Filter
           categories={CATEGORIES}
