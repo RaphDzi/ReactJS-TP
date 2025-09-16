@@ -23,7 +23,7 @@ function App() {
   const filteredImages = selectedCategories.length === 0 ? IMAGES : IMAGES.filter((image) => image.categories.some((category) => selectedCategories.includes(category)));
 
 
-  
+
   return (
     <>
       <h1>Galerie d'images</h1>
@@ -35,15 +35,23 @@ function App() {
         />
       </div>
       <main className="main">
-        {filteredImages.map((image) => (
-          <Card
-            key={image.id}
-            url={image.url}
-            title={image.title}
-            categories={image.categories}
-            author={image.author}
-          />
-        ))}
+        {filteredImages.length === 0 ? (
+          <div className='error-message'>
+            <h1>Veuillez changer les filtres</h1>
+            <p>Aucun contenu trouvé</p>
+          </div>
+        ) : (
+          filteredImages.map((image) => (
+            
+            <Card
+              key={image.id}
+              url={image.url}
+              title={image.title}
+              categories={image.categories}
+              author={image.author}
+            />
+          ))
+        )}
       </main>
     </>
   )
