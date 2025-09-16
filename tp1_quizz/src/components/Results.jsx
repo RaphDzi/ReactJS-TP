@@ -1,10 +1,8 @@
-import React from "react";
-
 export default function Results({ questions, answers, onRestart }) {
-  const score = questions.reduce((acc, q) => {
-    if (answers[q.id] === q.answer) return acc + 1;
-    return acc;
-  }, 0);
+  const score = questions.reduce(
+    (acc, q) => (answers[q.id] === q.answerId ? acc + 1 : acc),
+    0
+  );
 
   return (
     <div className="results">
@@ -14,8 +12,9 @@ export default function Results({ questions, answers, onRestart }) {
 
       {questions.map((q) => {
         const userAnswer = answers[q.id];
-        const isCorrect = userAnswer === q.answer;
-        const correctChoice = q.choices.find((c) => c.id === q.answer);
+        const isCorrect = userAnswer === q.answerId;
+        const correctChoice = q.choices.find(c => c.id === q.answerId);
+        const selectedChoice = q.choices.find(c => c.id === userAnswer);
 
         return (
           <div
@@ -24,14 +23,11 @@ export default function Results({ questions, answers, onRestart }) {
           >
             <h3 className="question-text">{q.prompt}</h3>
             <p>
-              <strong>Ta réponse :</strong>{" "}
-              {userAnswer
-                ? q.choices.find((c) => c.id === userAnswer)?.label
-                : "Aucune"}
+              <strong>Ta réponse :</strong> {selectedChoice ? selectedChoice.label : "Aucune"}
             </p>
             {!isCorrect && (
               <p>
-                <strong>Bonne réponse :</strong> {correctChoice.label}
+                <strong>Bonne réponse :</strong> {correctChoice?.label || "N/A"}
               </p>
             )}
           </div>

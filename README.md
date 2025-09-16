@@ -2,7 +2,7 @@
  2i Academy - React
 
 
-## TP1 Quizz
+## TP1 - Quizz
 
 Un quiz interactif développé avec **React + Vite**, permettant :
 
@@ -15,4 +15,7 @@ Un quiz interactif développé avec **React + Vite**, permettant :
 
 
 
-## TP2 ...
+## TP2 - Galerie d’Images avec Filtres
+
+Développer une galerie d’images avec filtres de catégories.
+L’application simule un chargement asynchrone, gère un état de filtre, et affiche des états conditionnels (loading, erreur, aucun résultat).
