@@ -5,8 +5,8 @@
 .main {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
-  gap: 1.5rem;   /* espace entre les cards */
-  padding: 2rem; /* marges autour */
+  gap: 1.5rem;
+  padding: 2rem;
 }
 
 /** Filter CSS*/
@@ -35,16 +35,16 @@
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 .card-image{
-  width: 80%;        /* prend toute la largeur de la card */
-  height: 200px;      /* hauteur fixe */
-  object-fit: cover;  /* garde les proportions, recadre si nécessaire */
+  width: 80%;
+  height: 200px;
+  object-fit: cover;
   border-radius: 15%;
 }
 .card-image-wrapper{
   display: flex;
-  justify-content: center; /* centre horizontalement */
-  align-items: center;     /* centre verticalement */
-  height: 150px;           /* hauteur fixe */
+  justify-content: center;
+  align-items: center;
+  height: 150px;
   overflow: hidden;
   margin-bottom: 4%;
 }

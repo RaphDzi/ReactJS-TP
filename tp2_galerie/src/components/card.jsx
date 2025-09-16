@@ -1,5 +1,11 @@
 import React from 'react'
 
+/*
+    -> Card function:
+        Receive data from data.js and use it to return a card with all informations 
+*/
+
+
 export default function
     Card({ url, title, categories, author }) {
     return (

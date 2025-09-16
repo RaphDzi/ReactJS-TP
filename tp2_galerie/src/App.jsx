@@ -7,14 +7,10 @@ import Filter from './components/filter.jsx';
 function App() {
   const [selectedCategories, setSelectedCategories] = useState([]); //image(s) and category(ies) selected
 
-
-  // Fonction pour ajouter/enlever une catégorie
   const handleCategoryClick = (category) => {
     if (category === "toutes") {
-      // Si "toutes" est cliquée, on vide la sélection
       setSelectedCategories([]);
     } else {
-      // Sinon on toggle la catégorie
       setSelectedCategories((prev) =>
         prev.includes(category)
           ? prev.filter((c) => c !== category)
@@ -23,17 +19,11 @@ function App() {
     }
   };
 
-
-  // Filtrage des images
-  const filteredImages =
-    selectedCategories.length === 0
-      ? IMAGES
-      : IMAGES.filter((image) =>
-        image.categories.some((cat) => selectedCategories.includes(cat))
-      );
+  // filtering images
+  const filteredImages = selectedCategories.length === 0 ? IMAGES : IMAGES.filter((image) => image.categories.some((category) => selectedCategories.includes(category)));
 
 
-
+  
   return (
     <>
       <h1>Galerie d'images</h1>
