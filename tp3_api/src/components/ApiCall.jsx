@@ -7,6 +7,7 @@ export default function ApiGet() {
 
     const [get, setGet] = useState(null);
     const [error, setError] = useState("");
+    const [copied, setCopied ] = useState(false);
 
     //Fonction generation d'une citation
     const generateQuote = () => {
@@ -22,7 +23,16 @@ export default function ApiGet() {
 
     //Fonction Copier la citation
     const copyQuote = () => {
-            
+        if (!get) return;
+
+        // On copie "citation - auteur"
+        const textToCopy = `"${get.quote}" — ${get.author}`;
+
+        navigator.clipboard.writeText(textToCopy)
+            .then(() => {
+                setCopied(true);
+                setTimeout(() => setCopied(false), 2000); // message disparaît après 2s
+            })
     }
 
 
