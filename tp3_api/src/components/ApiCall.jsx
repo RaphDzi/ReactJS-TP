@@ -31,7 +31,6 @@ export default function ApiGet() {
         navigator.clipboard.writeText(textToCopy)
             .then(() => {
                 setCopied(true);
-                setTimeout(() => setCopied(false), 2000); // message disparaît après 2s
             })
     }
 

@@ -32,3 +32,14 @@ Ce projet introduit :
 * la création d’un **hook personnalisé** pour la copie dans le presse papier.
 
 * URL de l'api pour une citation aléatoire : https://dummyjson.com/quotes/random
+
+
+
+## TP4 - APP bancaire
+
+Développer une application React permettant de gérer une liste de dépenses :
+
+* Ajouter une dépense (libellé, montant, catégorie, date),
+* Visualiser la liste des dépenses,
+* Supprimer une dépense,
+* Voir un résumé global et par catégorie.
